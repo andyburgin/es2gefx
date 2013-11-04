@@ -16,7 +16,6 @@ Fork it Fix it
 
 This script has been written and tested against a single small logstash/elastic search server and is it's first release. At present I've used it to generate 25000 nodes with 18000 edges, there is a limit to what the xml libraries underlying pygexf can do (especially if you hit a "Killed" message when trying to write out the gexf file). 
 
-
 Please feel free to fork, fix and push if you find errors.
 
 BTW this is also the first peice of "real" Python development I've done so please excuse if I'm comitting any horendous Python faux-pas.
@@ -27,20 +26,17 @@ Parameters
 ----------
 I've marked this as a TODO, but the folowing parameters need to be changes to command line arguments. However for now you can edit them in the code.
 
-host & port - the ip and port number of elasticsearch url
-
-starttime & endtime - in format %Y%m%d%H%M%S includes all entries in elasticsearch within these timestamps
-
-evttype - the value of the @type field that indicates an elasticsearch entry generated logstash that match the %{COMBINEDAPACHELOG} grok pattern
-
-relatedfield & relatetimeout - field and time period to be used for edge detection
-
-verbose - debug messages
+* host & port - the ip and port number of elasticsearch url
+* starttime & endtime - in format %Y%m%d%H%M%S includes all entries in elasticsearch within these timestamps
+* evttype - the value of the @type field that indicates an elasticsearch entry generated logstash that match the %{COMBINEDAPACHELOG} grok pattern
+* relatedfield & relatetimeout - field and time period to be used for edge detection
+* verbose - debug messages
 
 Requirements
 ------------
 
 Built and tested with Python 2.7.3 on Debian Wheezy
+
 Download the latest https://github.com/paulgirard/pygexf don't use the easy_install method as this will install 0.2.2 which is missing some of the newer features needed.
 
 
@@ -49,9 +45,9 @@ Credits
 
 Just a big shout out and thanks to the wonderful developers of:
 
-Logstash - http://logstash.net/ 
-Kibana - http://kibana.org/
-The Logstash cookbook - https://github.com/lusis/chef-logstash
-ElasticSearch - http://www.elasticsearch.org/
-Gephi - http://www.gephi.org/
+* Logstash - http://logstash.net/
+* Kibana - http://kibana.org/
+* The Logstash cookbook - https://github.com/lusis/chef-logstash
+* ElasticSearch - http://www.elasticsearch.org/
+* Gephi - http://www.gephi.org/
 
